@@ -9,6 +9,25 @@ int led[] = {
 };
 
 int potti = A0;
+//int msg_bits = 10;
+//int disp_bits = 4;
+//int binaryarray[msg_bits] = {0};
+
+/*
+void dec2bin(int decimal, int bits)
+	int index = msg_bits - 1;
+  while(index >= 0) {
+      int dual = 1 << index;
+      if(decimal >= dual) {
+          decimal = decimal - dual;
+          binaryarray[index] = 1;
+      } else {
+          binaryarray[index] = 0;
+      }
+      index--;
+  }
+}
+*/
 
 int* dec2bin(int decimal, int bits) {
 
