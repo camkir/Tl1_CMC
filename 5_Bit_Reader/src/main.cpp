@@ -15,7 +15,7 @@ const int button2 = A2;
 const int button3 = A3;
 
 const int bits = 10;
-int inputs[bits] = {0};
+int inputs[bits] = {};
 int index = 0;
 
 int binary2dec(int* arr) {
@@ -49,12 +49,9 @@ void loop(){
   }
 
   if(button3State.current < button3State.previous){
-    index--;
-    inputs[index] = 0;  //delete last entry & move back
+    inputs[index--] = 0;  //delete last entry & move back
   }
-
-  int sum = binary2dec(inputs);
-  writeDecToSegment(sum);
+  writeDecToSegment(binary2dec(inputs));
 
   button1State.previous = button1State.current;
   button2State.previous = button2State.current;
